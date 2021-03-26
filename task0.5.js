@@ -1,5 +1,8 @@
-var num1 = 1/2;
 function areaOfTriangle(num1, num2, num3) {
-    return num1 * num2 * num3 //area of a triangle = 1/2*base*height
+var perimeter = num1 + num2 + num3;
+var semiperimeter = 1/2 * perimeter;
+return Math.sqrt(semiperimeter * (semiperimeter -num1)
+    *(semiperimeter - num2)*(semiperimeter - num3));//area of a triangle = Heron's Formula
+    
 }
-areaOfTriangle(num1,1,3);
+console.log(areaOfTriangle(3,4,5));
